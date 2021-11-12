@@ -4,6 +4,7 @@ const nameInput = document.getElementById('fname');
 const phoneInput = document.getElementById('fnumber');
 const submitBtn = document.getElementById('submit__btn');
 
+// display and put away berger menu list
 document.addEventListener('click', function(e) {
     const target = e.target;
 
@@ -21,6 +22,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
+// check namee input
 function checkName() {
     if (nameInput.value.match(/[0-9]/)) {
         nameInput.setCustomValidity('Поле не должно содержать цифры');
@@ -32,6 +34,7 @@ function checkName() {
     }
 }
 
+// check phone number input
 function checkPhone() {
     if (!phoneInput.value.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) {
         phoneInput.setCustomValidity('Поле не валидно');
@@ -43,9 +46,7 @@ function checkPhone() {
     }
 }
 
-nameInput.addEventListener('input', checkName);
-
-
+// check data and save it in session storage
 submitBtn.addEventListener('click', function(e) {
 
     if (checkName() && checkPhone()) {
@@ -56,12 +57,19 @@ submitBtn.addEventListener('click', function(e) {
             phone : phoneInput.value
         };
 
+        // form is sended info
+        alert('Данные записаны');
+
+        // save data in session storage
         sessionStorage.setItem('name', taster.name);
         sessionStorage.setItem('phone', taster.phone);
+
+        // clear input fields
+        nameInput.value = '';
+        phoneInput.value = '';
     }
     else {
 
     }
-
 });
 
