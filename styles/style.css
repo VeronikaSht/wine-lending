@@ -92,6 +92,7 @@ a:hover {
 
 main .top {
   background-image: url("../images/bcg.png");
+  background-position: top center;
   width: 100%;
   background-size: cover;
   position: absolute;
@@ -681,13 +682,14 @@ footer .last__menu .last__menu--inner .soc__media a:nth-child(3) {
 @media (max-width: 780px) {
   .contacts__inner {
     margin-top: 10px;
+    display: block;
   }
   .contacts__inner p {
     margin-left: 20px;
     margin-bottom: 15px;
   }
   .contacts__inner a {
-    margin-left: 100px;
+    margin-left: 20px;
   }
   .menu__inner {
     display: none;
@@ -739,7 +741,7 @@ footer .last__menu .last__menu--inner .soc__media a:nth-child(3) {
     height: 30px;
     cursor: pointer;
     position: relative;
-    margin-left: 40px;
+    margin-left: 0;
   }
   .burger__menu--inner .menu__icon::before, .burger__menu--inner .menu__icon::after, .burger__menu--inner .menu__icon span {
     position: absolute;
@@ -766,7 +768,21 @@ footer .last__menu .last__menu--inner .soc__media a:nth-child(3) {
     margin-top: 10px;
     padding: 10px;
     width: 125px;
+    position: absolute;
+    right: -30px;
     display: none;
+  }
+  .burger__menu--inner .burger .catalog__wrapper {
+    margin-bottom: 10px;
+  }
+  .burger__menu--inner .burger .delivery__wrapper {
+    margin-bottom: 10px;
+  }
+  .burger__menu--inner .burger .collection__wrapper {
+    margin-bottom: 10px;
+  }
+  main .top__inner button {
+    margin-left: 5%;
   }
   main .description__inner {
     border: none;

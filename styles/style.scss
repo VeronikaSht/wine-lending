@@ -88,6 +88,7 @@ a {
 main {
     .top {
         background-image: url("../images/bcg.png");
+        background-position: top center;
         width: 100%;
         background-size: cover;
         position: absolute;
@@ -767,14 +768,14 @@ footer {
     .contacts {
         &__inner {
             margin-top: 10px;
-            
+            display: block;
             p {
                 margin-left: 20px;
                 margin-bottom: 15px;
             }
 
             a {
-                margin-left: 100px;
+                margin-left: 20px;
             }
         }
     }
@@ -839,7 +840,7 @@ footer {
                 height: 30px;
                 cursor: pointer;
                 position: relative;
-                margin-left: 40px;
+                margin-left: 0;
 
                 &::before, &::after, span {
                     position: absolute;
@@ -871,13 +872,36 @@ footer {
                 margin-top: 10px;
                 padding: 10px;
                 width: 125px;
+                position: absolute;
+                right: -30px;
 
                 display: none;
+
+                .catalog__wrapper {
+                    margin-bottom: 10px;
+                }
+
+                .delivery__wrapper {
+                    margin-bottom: 10px;
+                }
+
+                .collection__wrapper {
+                    margin-bottom: 10px;
+                    
+                }
             }
         }
     }
 
     main {
+        .top {
+            &__inner {
+                button {
+                    margin-left: 5%;
+                }
+            }
+        }
+
         .description {
             &__inner {
                 border: none;
